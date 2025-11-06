@@ -1,4 +1,4 @@
-﻿using System.Runtime.ExceptionServices;
+﻿using System;
 
 namespace Lab4
 {
@@ -11,9 +11,13 @@ namespace Lab4
             // code here
             if (vector == null || vector.Length == 0)
                 return 0;
+
+
             double sumSquares = 0;
             for (int i = 0; i < vector.Length; i++)
+            {
                 sumSquares += vector[i] * vector[i];
+            }
             length = Math.Sqrt(sumSquares);
             // end
 
@@ -26,11 +30,15 @@ namespace Lab4
             // code here
             if (array == null || array.Length == 0)
                 return 0;
+
+
             int minValue = Math.Min(P, Q);
             int maxValue = Math.Max(P, Q);
+
+
             for (int i = 0; i < array.Length; i++)
             {
-                if (array[i] > minValue && array[i] < maxValue) \
+                if (array[i] > minValue && array[i] < maxValue)
                     count++;
             }
             // end
